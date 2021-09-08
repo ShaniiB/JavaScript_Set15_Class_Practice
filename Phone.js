@@ -11,36 +11,30 @@ class Store {
         this.showcase.push(newPhone);
         console.log(`We current have these phone models to showcase.
         ${newPhone.phoneName}
+        ${newPhone.osType}
         ${newPhone.phoneStorage}
-        ${newPhone.phoneScreenSize}`);
+        ${newPhone.phoneScreenSize}
+        ${newPhone.phoneJack}`);
  }
 }    
 
 class Phone {
-    constructor(name, limit, size) {
+    constructor(name, type, limit, size, jack) {
         this.phoneName = name;
-        this.osType = "";
+        this.osType = type ;
         this.phoneStorage = limit;
         this.phoneScreenSize = size;
+        this.phoneJack = jack;
   }
-       phoneJack;
-
 };
 
 let myStore = new Store("Phone Store");
-
-let phone1 = new Phone("Pear", "Android", "3GB", "3inches");
-phone1.phoneJack = true;
-let phone2 = new Phone("Orange", "Android", "8GB", "4inches");
-phone2.phoneJack = true;
-let phone3 = new Phone("Banana", "Android", "8GB", "4inches");
-phone3.phoneJack = true;
-let phone4 = new Phone("Granny Smith", "iPhone", "5GB", "5inches");
-phone4.phoneJack = false;
-let phone5 = new Phone("Honey-crisp", "iPhone", "19GB", "10inches");
-phone5.phoneJack = false;
-let phone6 = new Phone("Cosimc-crisp", "iPhone", "30GB", "12inches");
-phone6.phoneJack = false;
+let phone1 = new Phone("Pear", "Android", "3GB", "3inches", "Yes");
+let phone2 = new Phone("Orange", "Android", "8GB", "4inches", "Yes");
+let phone3 = new Phone("Banana", "Android", "8GB", "4inches", "Yes");
+let phone4 = new Phone("Granny Smith", "iPhone", "5GB", "5inches", "No");
+let phone5 = new Phone("Honey-crisp", "iPhone", "19GB", "10inches", "No");
+let phone6 = new Phone("Cosimc-crisp", "iPhone", "30GB", "12inches", "No");
 
 
 myStore.showInventory(phone1);
@@ -50,4 +44,3 @@ myStore.showInventory(phone4);
 myStore.showInventory(phone5);
 myStore.showInventory(phone6);
 
-// let operatingSystem = 
