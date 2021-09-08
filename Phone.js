@@ -43,4 +43,3 @@ myStore.showInventory(phone3);
 myStore.showInventory(phone4);
 myStore.showInventory(phone5);
 myStore.showInventory(phone6);
-
